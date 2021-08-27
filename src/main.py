@@ -1,5 +1,10 @@
 from pynput.keyboard import Key, Controller
+import time
 
 keyboard = Controller()
-keyboard.press("A")
-keyboard.release("A")
+key_to_repeat = "a"
+
+while True:
+    time.sleep(2) #Seconds to wait before pressing the key
+    keyboard.press(key_to_repeat)
+    keyboard.release(key_to_repeat)
